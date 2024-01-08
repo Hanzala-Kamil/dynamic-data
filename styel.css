@@ -1,0 +1,207 @@
+body {
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4822303921568627) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: aliceblue;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.search-bar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 10px;
+
+}
+.search-bar h1 {
+  font-size: 40px;
+}
+.c-checkbox {
+  display: none;
+}
+.c-checkbox:checked + .c-formContainer .c-form {
+  width: 37.5em;
+}
+
+.c-checkbox:checked + .c-formContainer .c-form__toggle {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.c-checkbox:checked + .c-formContainer .c-form__input,
+.c-checkbox:checked + .c-formContainer .c-form__buttonLabel {
+  transition: 0.2s 0.1s;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.c-checkbox:not(:checked)
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle::before,
+.c-checkbox:checked
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle::before {
+  content: "Thank You! \1F60A";
+}
+
+.c-checkbox:not(:checked)
+  + .c-formContainer
+  .c-form__input:required:valid
+  ~ .c-form__toggle {
+  pointer-events: none;
+  cursor: default;
+}
+
+.c-formContainer,
+.c-form,
+.c-form__toggle {
+  width: 20em;
+  height: 6.25em;
+}
+
+.c-formContainer {
+  position: relative;
+  font-weight: 700;
+  /* box-shadow: 0px 0px 5px 5px rgba(184, 177, 196, 0.99); */
+  border-radius: 5em;
+}
+
+.c-form,
+.c-form__toggle {
+  position: absolute;
+  border-radius: 6.25em;
+  background-color: floralwhite;
+  transition: 0.2s;
+}
+
+.c-form {
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.625em;
+  box-sizing: border-box;
+  box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.c-form__toggle {
+  color: #000;
+  top: 0;
+  cursor: pointer;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-form__toggle::before {
+  font-size: 1.75em;
+  content: attr(data-title);
+}
+
+.c-form__input,
+.c-form__button {
+  font: inherit;
+  border: 0;
+  outline: 0;
+  border-radius: 5em;
+  box-sizing: border-box;
+}
+
+.c-form__input,
+.c-form__buttonLabel {
+  font-size: 1.75em;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.7);
+  transition: 0s;
+}
+
+.c-form__input {
+  color: #797474;
+  height: 100%;
+  width: 100%;
+  padding: 0 0.714em;
+}
+
+.c-form__input::placeholder {
+  color: currentColor;
+}
+
+.c-form__input:required:valid {
+  color: #4e4949;
+}
+
+.c-form__input:required:valid + .c-form__buttonLabel {
+  color: #ffffff;
+}
+
+.c-form__input:required:valid + .c-form__buttonLabel::before {
+  pointer-events: initial;
+}
+
+.c-form__buttonLabel {
+  color: #fff;
+  height: 100%;
+  width: auto;
+}
+
+.c-form__buttonLabel::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.c-form__button {
+  color: inherit;
+  padding: 0;
+  height: 100%;
+  width: 5em;
+  background-color: #000;
+}
+.containerOne {
+  width: 90%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card {
+    width: 20%;
+    min-height: 350px;
+    border: 7px outset white;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(184, 177, 196, 0.99);
+    padding: 10px;
+}
+.ImgCon{
+  height: 200px;
+  width: 100%;
+}
+.ImgCon img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.UniName_Link{
+  padding: 20px;
+}
+h3{
+  height: 50px;
+  width: 90%;
+  overflow-x: scroll;
+}
+::-webkit-scrollbar{
+  height: 5px;
+  width: 5px;
+}
